@@ -1,0 +1,62 @@
+@import "styles/variables.scss";
+
+.promoBg {
+  background-color: $Beige;
+
+  .promo {
+    margin-top: 139px;
+    margin-bottom: 154px;
+    width: 1340px;
+    .blocks {
+      display: flex;
+      gap: 60px;
+      &:not(:first-child) {
+        margin-top: 90px;
+      }
+      .block1 {
+        .img,
+        .video {
+          width: 640px;
+          height: 400px;
+          img {
+            width: 640px;
+            height: 400px;
+          }
+        }
+      }
+      .text1,
+      .text3 {
+        width: 639px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+          width: 88px;
+          height: 76px;
+        }
+        .title2 {
+          width: 500px;
+        }
+        .title,
+        .title2 {
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 130%;
+          text-transform: uppercase;
+          color: $DarkBlue;
+        }
+        .info {
+          font-family: "Roboto";
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 170%;
+          color: $DarkBlue;
+        }
+      }
+      .text3 {
+        justify-content: space-around;
+      }
+    }
+  }
+}

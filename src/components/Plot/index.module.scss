@@ -1,0 +1,106 @@
+@import "styles/variables.scss";
+
+.plotBg {
+  background-color: $GreenLightHover;
+
+  .plot {
+    padding-top: 92px;
+    padding-bottom: 167px;
+    .topInfo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 167px;
+      margin-bottom: 73px;
+      .title {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: $DarkBlue;
+      }
+      .text {
+        width: 560px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 160%;
+        color: $DarkBlue;
+      }
+    }
+    .blocks {
+      width: 1340px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .block {
+        width: 420px;
+        height: 738px;
+        background-color: $Beige;
+
+        .topTitle {
+          padding-top: 23px;
+          display: flex;
+          gap: 23px;
+          align-items: center;
+          .text {
+            font-family: "Montserrat";
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 140%;
+            color: $DarkBlue;
+            width: 236px;
+          }
+
+          .svgBg1,
+          .svgBg2,
+          .svgBg3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 117px;
+            height: 93px;
+          }
+          .svgBg1 {
+            background-color: $Orange;
+          }
+          .svgBg2 {
+            background-color: $Yellow;
+          }
+          .svgBg3 {
+            background-color: $Green;
+          }
+        }
+        .infoText {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          width: 347px;
+          height: 238px;
+          padding-top: 20px;
+          padding-bottom: 58px;
+
+          p {
+            font-family: "Roboto";
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 170%;
+            color: $DarkBlue;
+          }
+        }
+        .blockImg {
+          width: 420px;
+          height: 362px;
+          img {
+            width: 420px;
+            height: 362px;
+          }
+        }
+      }
+    }
+  }
+}

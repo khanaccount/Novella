@@ -1,0 +1,42 @@
+@import "./normalize.scss";
+@import "./variables.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,600;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+* {
+  font-family: "Urbanist", "Roboto", "Jost", "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffff;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: $Beige;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  line-height: 150%;
+}
+
+.main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

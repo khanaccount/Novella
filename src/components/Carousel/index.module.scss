@@ -1,0 +1,30 @@
+@import "styles/variables.scss";
+
+.carouselBg {
+  background-color: $Beige;
+  height: 995px;
+
+  .carousel {
+    .topInfo {
+      display: flex;
+      gap: 219px;
+      margin-top: 109px;
+      .title {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 140%;
+        text-transform: uppercase;
+        color: $DarkBlue;
+      }
+      .text {
+        width: 531px;
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 160%;
+        color: $GreenHover;
+      }
+    }
+  }
+}
