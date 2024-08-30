@@ -2,7 +2,7 @@
 
 .plotBg {
   background-color: $GreenLightHover;
-
+  position: relative;
   .plot {
     padding-top: 92px;
     padding-bottom: 167px;
@@ -102,5 +102,19 @@
         }
       }
     }
+  }
+  .scrollTop {
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    position: fixed;
+    bottom: 76px;
+    right: 76px;
+    width: 74px;
+    height: 74px;
+    background-color: $GreenHover;
   }
 }

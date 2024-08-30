@@ -2,8 +2,7 @@
 
 .carouselBg {
   background-color: $Beige;
-  height: 995px;
-
+  margin-bottom: 100px;
   .carousel {
     .topInfo {
       display: flex;
@@ -26,5 +25,110 @@
         color: $GreenHover;
       }
     }
+  }
+}
+
+.slider {
+  max-width: 2200px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 130px;
+  .arrowLeft,
+  .arrowRight {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background-color: transparent;
+    svg {
+      width: 30px;
+      background-color: transparent;
+      path {
+        fill: transparent;
+      }
+      &:hover {
+        path {
+          stroke: $GreenHover;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  .arrowLeft {
+    left: 25%;
+  }
+  .arrowRight {
+    right: 25%;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: $DarkBlue;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .active {
+    background-color: $Green;
+    width: 20px;
+    height: 20px;
+    transition: background-color 0.3s;
+  }
+}
+:global {
+  [class^="number-slide"],
+  [class*=" number-slide"] {
+    background: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+
+    transition: transform 0.3s ease;
+    opacity: 0.3;
+    width: 359px !important;
+    height: 230px !important;
+    img {
+      flex: 1 !important;
+      width: 359px !important;
+      height: 230px !important;
+    }
+  }
+
+  .active-slide {
+    width: 780px !important;
+    height: 500px !important;
+    z-index: 2 !important;
+    img {
+      flex: 1 !important;
+      width: 780px !important;
+      height: 500px !important;
+    }
+  }
+
+  .keen-slider {
+    display: flex;
+    align-items: center;
+  }
+
+  .active-slide {
+    overflow: unset !important;
+    opacity: 1;
   }
 }

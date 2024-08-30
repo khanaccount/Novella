@@ -1,17 +1,22 @@
 import React from "react";
-import { Header } from "components/Header";
+import { Header } from "./Header";
 import { Outlet } from "react-router-dom";
+import { Footer } from "./Footer";
 
 export const Layout: React.FC = () => {
   return (
     <>
-      <Header />
+      <header className="header">
+        <Header />
+      </header>
 
       <main className="main">
         <Outlet />
       </main>
 
-      <footer className="footer"></footer>
+      <footer className="footer">
+        <Footer />
+      </footer>
     </>
   );
 };

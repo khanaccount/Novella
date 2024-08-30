@@ -1,5 +1,4 @@
 import React from "react";
-
 import s from "./index.module.scss";
 
 import promo1 from "assets/img/promo1.png";
@@ -10,7 +9,7 @@ import promo3Svg from "assets/svg/promo3.svg";
 
 export const Promo: React.FC = () => {
   return (
-    <section className={s.promoBg}>
+    <section id="nextSection" className={s.promoBg}>
       <div className={`container ${s.promo}`}>
         <div className={s.blocks}>
           <div className={s.block1}>
@@ -54,7 +53,6 @@ export const Promo: React.FC = () => {
                 height="100%"
                 src="https://www.youtube.com/embed/B5RLsVj4y6E"
                 title="YouTube video player"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>

@@ -1,7 +1,8 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import s from "./index.module.scss";
 
+import scrollTop from "assets/svg/scrollTop.svg";
 import plot1Svg from "assets/svg/plot1.svg";
 import plot2Svg from "assets/svg/plot2.svg";
 import plot3Svg from "assets/svg/plot3.svg";
@@ -45,8 +46,38 @@ const cardData: CardData[] = [
 ];
 
 export const Plot: React.FC = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const plotElement = document.getElementById("plot");
+      if (plotElement) {
+        const rect = plotElement.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Кнопка должна быть видна, если верх элемента #plot находится ниже нуля
+        // или если элемент частично виден в нижней части экрана
+
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          setShowScrollTop(true);
+        } else if (rect.top >= windowHeight) {
+          // Скрыть кнопку, если элемент полностью прокручивается выше экрана
+          setShowScrollTop(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Выполняем проверку при монтировании компонента
+    handleScroll();
+    // Удаляем слушатель события при размонтировании компонента
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <section className={s.plotBg}>
+    <section id="plot" className={s.plotBg}>
       <div className={`container ${s.plot}`}>
         <div className={s.topInfo}>
           <h1 className={s.title}>Классический сюжет</h1>
@@ -71,6 +102,12 @@ export const Plot: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {showScrollTop && (
+        <Link className={s.scrollTop} to="Top" smooth={true} offset={-10} duration={500}>
+          <img src={scrollTop} alt="scrollTop" />
+        </Link>
+      )}
     </section>
   );
 };
