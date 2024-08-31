@@ -1,6 +1,7 @@
 {
   "name": "novella",
   "private": true,
+  "homepage": "https://khanaccount.github.io/Novella/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -11,12 +12,14 @@
   },
   "dependencies": {
     "@types/react-scroll": "^1.8.10",
+    "formik": "^2.4.6",
     "keen-slider": "^6.8.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.1",
     "react-scroll": "^1.9.0",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
