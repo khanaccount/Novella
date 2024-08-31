@@ -6,7 +6,7 @@ import "./styles/index.scss";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/ElfenLied">
+    <BrowserRouter basename="/Novella">
       <App />
     </BrowserRouter>
   </React.StrictMode>
