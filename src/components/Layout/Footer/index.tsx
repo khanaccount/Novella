@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import s from "./index.module.scss";
 
 import footerLogo from "assets/svg/footerLogo.svg";
+import footerCordinateSvg from "assets/svg/footerCordinateSvg.svg";
 
 import footerVk from "assets/svg/footerVk.svg";
 import footerYouTube from "assets/svg/footerYouTube.svg";
@@ -37,7 +38,7 @@ export const Footer: React.FC = () => {
       <div className={`container ${s.footer}`}>
         <div className={s.leftBlock}>
           <div className={s.logoInfo}>
-            <img src={footerLogo} alt="footerLogo" />
+            <img className={s.footerLogo} src={footerLogo} alt="footerLogo" />
             <div className={s.logoText}>
               <p className={s.office}>Офис продаж:</p>
               <p className={s.number}>
@@ -45,10 +46,25 @@ export const Footer: React.FC = () => {
               </p>
             </div>
           </div>
+          <div className={s.logoInfoModal}>
+            <div className={s.logoBlock}>
+              <img className={s.footerLogo} src={footerCordinateSvg} alt="footerCordinateSvg" />
+              <p className={s.office}>Офис продаж:</p>
+            </div>
+            <div className={s.logoText}>
+              <p className={s.number}>
+                +7 391 <span>271-40-20</span>
+              </p>
+            </div>
+          </div>
+
           <p className={s.address}>г. Красноярск,</p>
           <p className={s.address}> ул. Молокова д. 1 копр. 1, оф. 178, 1 этаж</p>
           <p className={s.schedule}>График работы офиса продаж:</p>
-          <p className={s.openingHours}>В будни с 9:00 до 18:00 Суббота, воскресенье выходной</p>
+          <p className={s.openingHours}>
+            В будни с 9:00 до 18:00 <br />
+            Суббота воскресенье выходной
+          </p>
 
           <div className={s.socialMedia}>
             {socialMedia.map((item) => (
@@ -90,6 +106,7 @@ export const Footer: React.FC = () => {
                   <Field type="checkbox" name="checkbox" id="confirm" className={s.checkboxInput} />
                   <label htmlFor="confirm" className={s.checkboxText}>
                     Я согласен на обработку моих персональных данных
+                    <ErrorMessage name="checkbox" component="div" className={s.errorPersonalInfo} />
                   </label>
                   <ErrorMessage name="checkbox" component="div" className={s.error} />
                 </div>

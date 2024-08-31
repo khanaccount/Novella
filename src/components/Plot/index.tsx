@@ -78,6 +78,12 @@ export const Plot: React.FC = () => {
 
   return (
     <section id="plot" className={s.plotBg}>
+      <div className={s.topInfoMobile}>
+        <h1 className={s.title}>Классический сюжет</h1>
+        <div className={s.plotMobileBg}>
+          <h5 className={s.text}>Novella — дом в лучших традициях комфорт-класса</h5>
+        </div>
+      </div>
       <div className={`container ${s.plot}`}>
         <div className={s.topInfo}>
           <h1 className={s.title}>Классический сюжет</h1>
@@ -93,6 +99,7 @@ export const Plot: React.FC = () => {
                 <h5 className={s.text}>{card.title}</h5>
               </div>
               <div className={s.infoText}>
+                <h5 className={s.textMobile}>{card.title}</h5>
                 <p>{card.description}</p>
               </div>
               <div className={s.blockImg}>

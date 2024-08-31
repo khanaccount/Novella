@@ -89,6 +89,83 @@
     transition: background-color 0.3s;
   }
 }
+
+@media (max-width: 375px) {
+  .carouselBg {
+    background-color: $Beige;
+    margin-bottom: 0;
+    .carousel {
+      .topInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-top: 45px;
+        .title {
+          width: 345px;
+          text-align: center;
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 140%;
+          text-transform: uppercase;
+          color: $DarkBlue;
+        }
+        .text {
+          width: 202px;
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 160%;
+          text-align: center;
+          color: $GreenHover;
+          padding-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .slider {
+    max-width: 2200px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 0;
+    .arrowLeft,
+    .arrowRight {
+      svg {
+        width: 25px;
+      }
+    }
+    .arrowLeft {
+      left: 5%;
+    }
+    .arrowRight {
+      right: 5%;
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+    .dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -25px;
+      z-index: 10;
+      position: relative;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+    }
+
+    .active {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
 :global {
   [class^="number-slide"],
   [class*=" number-slide"] {

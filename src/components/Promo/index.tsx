@@ -18,8 +18,12 @@ export const Promo: React.FC = () => {
             </div>
           </div>
           <div className={s.text1}>
-            <img src={promo1Svg} alt="promo1Svg" />
-            <h5 className={s.title}>Близость к центру города</h5>
+            <div className={s.mobileBlock}>
+              <img src={promo1Svg} alt="promo1Svg" />
+              <h5 className={s.title}>Близость к центру города</h5>
+            </div>
+            <img src={promo1Svg} alt="promo1Svg" className={s.desktopImg} />
+            <h5 className={`${s.title} ${s.desktopTitle}`}>Близость к центру города</h5>
             <p className={s.info}>
               Дом расположен в непосредственной близости к центру города, который открывает массу
               возможностей для отдыха и культурного времяпровождения. Театры, кафе и рестораны,
@@ -28,10 +32,14 @@ export const Promo: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className={s.blocks}>
+        <div className={`${s.blocks} ${s.blocksMobile}`}>
           <div className={s.text1}>
-            <img src={promo2Svg} alt="promo2Svg" />
-            <h5 className={s.title2}>Готовая инфраструктура</h5>
+            <div className={s.mobileBlock}>
+              <img src={promo2Svg} alt="promo2Svg" />
+              <h5 className={s.title2}>Готовая инфраструктура</h5>
+            </div>
+            <img src={promo2Svg} alt="promo2Svg" className={s.desktopImg} />
+            <h5 className={`${s.title2} ${s.desktopTitle}`}>Готовая инфраструктура</h5>
             <p className={s.info}>
               Рядом 7 частных и муниципальных детских садов. 5 школ, лицеев и гимназий. В их числе
               престижная университетская гимназия «Универс». В пешеходной доступности два торговых
@@ -41,7 +49,7 @@ export const Promo: React.FC = () => {
           </div>
           <div className={s.block1}>
             <div className={s.img}>
-              <img src={promo2} alt="promo2" />
+              <img className={s.imgBlock2} src={promo2} alt="promo2" />
             </div>
           </div>
         </div>
@@ -59,8 +67,12 @@ export const Promo: React.FC = () => {
             </div>
           </div>
           <div className={s.text3}>
-            <img src={promo3Svg} alt="promo3Svg" />
-            <h5 className={s.title}>Жилой комплекс с высоты</h5>
+            <div className={s.mobileBlock}>
+              <img src={promo3Svg} alt="promo3Svg" />
+              <h5 className={s.title}>Жилой комплекс с высоты</h5>
+            </div>
+            <img src={promo3Svg} alt="promo3Svg" className={s.desktopImg} />
+            <h5 className={`${s.title} ${s.desktopTitle}`}>Жилой комплекс с высоты</h5>
             <p className={s.info}>
               Любоваться Novella можно с самых разных точек города. Дом прекрасно виден даже в
               темное время суток — сложно не заметить красивый светящийся логотип. В видео мы

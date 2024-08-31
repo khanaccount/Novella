@@ -1,0 +1,107 @@
+@import "styles/variables.scss";
+
+.headerBgFixed {
+  background-color: #ffffff;
+  height: 86px;
+  width: 100%;
+  top: 0;
+  z-index: 2000000;
+  position: fixed;
+  animation: fadeIn 0.5s ease-out;
+  .headerFixed {
+    display: flex;
+    flex-direction: column;
+
+    .nav {
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .leftBlock {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        .links {
+          display: flex;
+          gap: 50px;
+          a {
+            font-family: "Montserrat";
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: uppercase;
+            color: $DarkBlue;
+            &:hover {
+              color: $GreenHover;
+              transition: $TextTransition;
+            }
+          }
+        }
+      }
+      .number {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        cursor: pointer;
+        img {
+          width: 28px;
+          height: 28px;
+        }
+
+        .text {
+          font-family: "Montserrat";
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 29px;
+          color: $DarkBlue;
+          span {
+            font-weight: 800;
+            color: $DarkBlue;
+          }
+        }
+      }
+    }
+  }
+}
+.headerBgHidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 375px) {
+  .headerBgHidden {
+    display: none;
+  }
+  .headerBgFixed {
+    display: none;
+    .headerFixed {
+      display: none;
+
+      .nav {
+        display: none;
+        .leftBlock {
+          display: none;
+          .links {
+            display: none;
+          }
+        }
+        .number {
+          display: none;
+          .text {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

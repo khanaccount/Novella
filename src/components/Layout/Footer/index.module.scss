@@ -12,6 +12,9 @@
   padding-bottom: 99px;
   gap: 160px;
   .leftBlock {
+    .logoInfoModal {
+      display: none;
+    }
     .logoInfo {
       display: flex;
       align-items: center;
@@ -210,6 +213,9 @@
         line-height: 160%;
 
         color: $GreenLight;
+        .errorPersonalInfo {
+          display: none;
+        }
       }
     }
     .publicOffer {
@@ -220,6 +226,203 @@
       font-size: 14px;
       line-height: 170%;
       color: $GreenLight;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    flex-direction: column-reverse;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    .leftBlock {
+      .logoInfoModal {
+        .logoBlock {
+          display: flex;
+          align-items: center;
+          gap: 11px;
+          .office {
+            font-family: "Montserrat";
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 170%;
+            color: $Beige;
+          }
+        }
+        .number {
+          margin-top: 15px;
+          margin-bottom: 15px;
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 26px;
+          line-height: 130%;
+          text-transform: uppercase;
+          color: $Green;
+
+          span {
+            color: $GreenLight;
+          }
+        }
+      }
+      .logoInfo {
+        display: none;
+        .logoText {
+          .office {
+            font-family: "Montserrat";
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 170%;
+            color: $Beige;
+          }
+          .number {
+            font-family: "Montserrat";
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 130%;
+            text-transform: uppercase;
+            color: $Green;
+
+            span {
+              color: $GreenLight;
+            }
+          }
+        }
+      }
+      .address {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 160%;
+        color: #f8f4ef;
+        color: $Beige;
+      }
+      .schedule,
+      .openingHours {
+        font-family: "Roboto";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: $GreenLight;
+      }
+      .schedule {
+        margin-top: 25px;
+      }
+      .openingHours {
+        margin-top: 15px;
+        width: 210px;
+      }
+      .socialMedia {
+        display: flex;
+        gap: 20px;
+        .socialIcons {
+          margin-top: 50px;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $Green;
+
+          &:hover {
+            background-color: $GreenLight;
+            transition: all 0.3s ease-in;
+          }
+        }
+      }
+    }
+    .rightBlock {
+      .title {
+        width: 345px;
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: $Beige;
+        margin-bottom: 35px;
+      }
+      .subscribForm {
+        .error {
+          color: red;
+          font-size: 14px;
+        }
+        .emaiInput {
+          outline: none;
+          border: none;
+          width: 284px;
+          height: 36px;
+          border-bottom: 3px solid $Green;
+          padding-bottom: 9px;
+          background-color: transparent;
+          font-family: "Roboto";
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+          color: $GreenLight;
+          &::placeholder {
+            font-family: "Roboto";
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: $GreenLight;
+          }
+        }
+        .subscribBtn {
+          position: absolute;
+          left: 0;
+          top: 150px;
+          width: 174px;
+          height: 50px;
+          .btnBg {
+            width: 174px;
+            height: 50px;
+
+            bottom: -6px;
+            left: -6px;
+          }
+          .btn {
+            width: 174px;
+            height: 50px;
+
+            font-family: "Jost";
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 17px;
+            text-transform: uppercase;
+            color: $DarkBlue;
+          }
+        }
+      }
+      .checkboxButton {
+        margin-top: 40px;
+        .checkboxInput {
+          width: 16px;
+          height: 16px;
+        }
+
+        .checkboxText {
+          font-family: "Roboto";
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 160%;
+          color: $GreenLight;
+          .errorPersonalInfo {
+            display: block;
+            color: red;
+            font-family: "Roboto";
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 160%;
+          }
+        }
+        .error {
+          display: none;
+        }
+      }
+      .publicOffer {
+        display: none;
+      }
     }
   }
 }

@@ -1,0 +1,349 @@
+@import "styles/variables.scss";
+
+.headerBg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(../../../../assets/img/headerBg1.jpg);
+  .navMobile {
+    display: none;
+  }
+  .header {
+    height: 100vh;
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .leftBlock {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        .links {
+          display: flex;
+          gap: 50px;
+          a {
+            font-family: "Montserrat";
+            text-transform: uppercase;
+            line-height: 20px;
+            font-weight: 600;
+            &:hover {
+              color: $GreenLightHover;
+              transition: $TextTransition;
+            }
+          }
+        }
+      }
+      .number {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        cursor: pointer;
+        img {
+          width: 28px;
+          height: 28px;
+        }
+        .text {
+          font-family: "Montserrat";
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 29px;
+
+          span {
+            font-weight: 800;
+          }
+        }
+      }
+    }
+    .content {
+      width: 904px;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      padding-left: 215px;
+      .title {
+        font-family: "Montserrat";
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 140%;
+      }
+      .text {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 170%;
+      }
+    }
+  }
+}
+.bottomBg {
+  position: relative;
+  min-height: 426px;
+  background-color: $Green;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  .scrollBlock {
+    position: absolute;
+    top: -147px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 780px;
+    height: 357px;
+    background-color: rgba($DarkBlue, 0.85);
+
+    .findMoreBtn {
+      cursor: pointer;
+      position: relative;
+      right: -50%;
+      bottom: 34px;
+      transform: translateX(-50%);
+      width: 310px;
+      height: 71px;
+      .btnBg {
+        width: 310px;
+        height: 71px;
+        background-color: #ffff;
+        position: absolute;
+        bottom: -6px;
+        left: -6px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+      }
+      .btn {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 310px;
+        height: 71px;
+
+        background-color: $Orange;
+
+        font-family: "Jost";
+        font-size: 18px;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background-color: $GreenHover;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .scrollInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .btn {
+        cursor: pointer;
+        width: 20px;
+        height: 54px;
+        margin-bottom: 56px;
+      }
+      .text {
+        font-family: "Montserrat";
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 170%;
+        text-align: center;
+        width: 620px;
+      }
+    }
+  }
+  .bottomInfoModal {
+    display: none;
+  }
+  .bottomInfo {
+    text-align: center;
+    width: 780px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.mouseAnimation {
+  animation: moveUpDown 1s infinite alternate;
+}
+
+@media (max-width: 375px) {
+  .headerBg {
+    background-image: url(../../../../assets/img/headerBgMobile1.jpg);
+    background-size: auto 667px;
+    background-position: center top;
+    background-attachment: scroll;
+    .navMobileBg {
+      background-color: rgba($DarkBlue, 0.7);
+      .navMobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 71px;
+        .btns {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          button,
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: $Green;
+            width: 41px;
+            height: 41px;
+            &:not(:last-child) {
+              margin-right: 20px;
+            }
+          }
+        }
+      }
+    }
+    .header {
+      height: 483px;
+      .nav {
+        display: none;
+      }
+      .content {
+        margin-top: 113px;
+        height: 200px;
+        width: 100%;
+        padding: 0;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        .title {
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 130%;
+          color: #ffffff;
+        }
+        .text {
+          margin-top: 5px;
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 160%;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .bottomBg {
+    position: relative;
+    min-height: 246px;
+    background-color: $Green;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .scrollBlock {
+      position: absolute;
+      top: -134px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 352px;
+      height: 176px;
+      background-color: rgba($DarkBlue, 0.85);
+
+      .findMoreBtn {
+        cursor: pointer;
+        position: relative;
+        right: -50%;
+        bottom: 54px;
+        transform: translateX(-50%);
+        width: 236px;
+        height: 63px;
+        .btnBg {
+          width: 232px;
+          height: 59px;
+          background-color: #ffff;
+          position: absolute;
+          bottom: -6px;
+          left: -6px;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+        }
+        .btn {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 232px;
+          height: 59px;
+
+          background-color: $Orange;
+
+          font-family: "Jost";
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: $Beige;
+          &:hover {
+            background-color: $GreenHover;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+
+      .scrollInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .btn {
+          display: none;
+        }
+        .text {
+          text-align: start;
+          position: relative;
+          bottom: 30px;
+          width: 280px;
+          font-family: "Montserrat";
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 160%;
+          color: #ffffff;
+        }
+      }
+    }
+    .bottomInfo {
+      display: none;
+    }
+    .bottomInfoModal {
+      display: flex;
+      text-align: left;
+      width: 293px;
+      margin-bottom: 31px !important;
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      margin-bottom: 0;
+      color: #ffffff;
+    }
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

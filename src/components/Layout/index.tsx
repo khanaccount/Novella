@@ -1,13 +1,14 @@
 import React from "react";
-import { Header } from "./Header";
+
 import { Outlet } from "react-router-dom";
 import { Footer } from "./Footer";
+import { MainHeader } from "./MainHeader";
 
 export const Layout: React.FC = () => {
   return (
     <>
       <header className="header">
-        <Header />
+        <MainHeader />
       </header>
 
       <main className="main">
